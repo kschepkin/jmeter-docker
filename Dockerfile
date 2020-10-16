@@ -14,4 +14,4 @@ ADD start.sh /usr/local/bin/start.sh
 VOLUME ["/data/scripts"]
 EXPOSE 22
 
-CMD ["/bin/bash", "/data/start.sh"]
+CMD ["/bin/bash", "/usr/local/bin/start.sh"]
