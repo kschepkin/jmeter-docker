@@ -9,6 +9,9 @@ RUN apt update && apt install -y \
     && chmod 0755 /data/apache-jmeter-5.3/bin/jmeter.sh \
 	&& mkdir -p /data/scripts
 
+ENV JMETER_HOME /data/apache-jmeter-5.3
+ENV PATH $JMETER_HOME/bin:$PATH
+
 ADD start.sh /usr/local/bin/start.sh
 
 VOLUME ["/data/scripts"]
